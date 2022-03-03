@@ -104,6 +104,7 @@ resource "azurerm_public_ip" "catapp-pip" {
 
 resource "azurerm_virtual_machine" "catapp" {
   department          = "devops"
+  billable            = "true"
   name                = "${var.prefix}-meow"
   location            = var.location
   resource_group_name = azurerm_resource_group.myresourcegroup.name
